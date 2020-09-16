@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('gitcheckout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Githubconnection', url: 'https://github.com/manojthirumani/flipkart.com.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'manojthirumani-jenkins', url: 'https://github.com/manojthirumani/flipkart.com.git']]])
             }
         }
         stage('buildstage') {
